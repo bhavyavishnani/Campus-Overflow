@@ -29,6 +29,10 @@ app.get('/', (req, res)=>{
     res.send('WELCOME TO CAMPUS OVERFLOW');
 });
 
+app.get("/health", (req, res) => {
+  res.status(200).send("OK");
+});
+
 app.listen(PORT, ()=>{
     console.log(`sever is running on port ${PORT}`);
 });
